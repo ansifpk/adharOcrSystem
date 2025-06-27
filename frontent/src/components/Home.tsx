@@ -48,7 +48,8 @@ const Home: React.FC = () => {
     input.click();
   };
   useEffect(() => {
-    setLoading(false)
+    setLoading(false);
+    setApiResponse("Start Performing OCR by inputing your Aadhaar front and back");
     errors?.map((err) => toast.error(err.message));
   }, [errors]);
   const handleParseAadhaar = async () => {
