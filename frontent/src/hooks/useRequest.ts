@@ -21,6 +21,8 @@ export default ()=>{
             return res.data;
           } catch (error:any) {
             console.log(error,"errorerrorerrorerror");
+            
+            setError(error.Response.data.errors)
           }
      }
      return {doRequest,errors};

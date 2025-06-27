@@ -48,6 +48,7 @@ const Home: React.FC = () => {
     input.click();
   };
   useEffect(() => {
+    console.log(errors,"hiiiii")
     errors?.map((err) => toast.error(err.message));
   }, [errors]);
   const handleParseAadhaar = async () => {
