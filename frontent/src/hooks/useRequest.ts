@@ -20,9 +20,9 @@ export default ()=>{
             }
             return res.data;
           } catch (error:any) {
-            console.log(error,"errorerrorerrorerror");
+            console.log(error,"errorerrorerrorerror",error.response.data.errors);
             
-            setError(error.Response.data.errors)
+            setError(error.response.data.errors)
           }
      }
      return {doRequest,errors};
