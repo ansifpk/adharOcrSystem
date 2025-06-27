@@ -52,13 +52,12 @@ const Home: React.FC = () => {
   }, [errors]);
   const handleParseAadhaar = async () => {
     setLoading(true)
-    console.log("hyu");
     
     if (frontImage && backImage) {
-      console.log("hi",success);
+
       
       setSuccess(false);
-      console.log("hi2",success);
+    
       setApiResponse("");
       const formData = new FormData();
       formData.append("frontImage", front as File);
@@ -80,8 +79,7 @@ const Home: React.FC = () => {
       setApiResponse("Please upload both front and back of Aadhaar card");
     }
   };
-  console.log(apiResponse?'ind':'illa',Object.keys(adharData).length === 0);
-  
+
   return (
     <div className=" w-full mx-auto p-6 bg-white shadow-md rounded-lg">
       <div className="w-full flex justify-center gap-10">

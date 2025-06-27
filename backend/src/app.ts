@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors({
     origin:process.env.FRONTENT_URL
 }))
+
 const adharRouter = container.resolve(AdharRouter)
 app.use(adharRouter.router);
 app.all("*",(req,res)=>{
