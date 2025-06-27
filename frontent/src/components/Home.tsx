@@ -7,7 +7,7 @@ type DynamicObject = {
 };
 const Home: React.FC = () => {
   const [adharData, setAdhardata] = useState<DynamicObject>({});
-  const [success, setSuccess] = useState(false);
+  // const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [frontImage, setFrontImage] = useState<string | null>(null);
   const [backImage, setBackImage] = useState<string | null>(null);
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
     if (frontImage && backImage) {
 
       
-      setSuccess(false);
+      // setSuccess(false);
     
       setApiResponse("");
       const formData = new FormData();
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
         onSuccess: (res) => {
           setAdhardata(res.data);
           setLoading(false)
-          setSuccess(true);
+          // setSuccess(true);
           setApiResponse("");
         },
       });
